@@ -5,7 +5,7 @@ int check_prime(int value)
 {
     if (value == 1)
         return 0;
-    if (value == 2)
+    if (value % 2 == 0)
         return 1;
     for (int i = 3; i < sqrt(value) + 1; i += 2)
     {
@@ -17,5 +17,5 @@ int check_prime(int value)
 
 int main(void)
 {
-    printf("%d %d", 1337, check_prime(1337));
+    printf("%d %d", 2048, check_prime(2048));
 }
